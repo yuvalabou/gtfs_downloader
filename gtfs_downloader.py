@@ -6,8 +6,8 @@ import shutil
 import time
 from tqdm import tqdm
 
-savedir = "D:/Temp/"
-gtfs_dir = "D:/gtfs/"
+savedir = "./Temp/"
+gtfs_dir = "../gtfs/"
 gtfs = "israel-public-transportation.zip"
 
 ftp = FTP('199.203.58.18')
@@ -67,10 +67,7 @@ def main():
         print("Extracting")
         for item in tqdm(zip.infolist(), total=len(zip.namelist()), unit='Files'):
             zip.filename = os.path.basename(zip.filename)
-            try:
-                zip.extract(item, gtfs_dir)
-            except zipfile.error() as error:
-                pass
+            zip.extract(item, gtfs_dir)
 
     zip.close()
     print("Extracted to ../gtfs/ folder.")
