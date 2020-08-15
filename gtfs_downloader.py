@@ -4,8 +4,8 @@ import os
 import time
 from tqdm import tqdm
 
-SAVE_DIR = "D:/Temp/"
-GTFS_DIR = "D:/gtfs/"
+SAVE_DIR = "./Temp/"
+GTFS_DIR = "../gtfs/"
 GTFS_NAME = "israel-public-transportation.zip"
 
 ftp = FTP('199.203.58.18')
